@@ -1,0 +1,39 @@
+{
+  "name": "create-flush",
+  "version": "0.1.0",
+  "description": "Create Flush framework applications",
+  "type": "module",
+  "bin": {
+    "create-flush": "dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target bun --format esm",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/inquirer": "^9.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "flush",
+    "framework",
+    "bun",
+    "typescript",
+    "create",
+    "scaffold"
+  ],
+  "author": "Flush Framework Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flush-framework/flush.git"
+  },
+  "homepage": "https://flush-framework.dev"
+}

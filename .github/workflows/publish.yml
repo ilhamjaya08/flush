@@ -1,0 +1,42 @@
+name: Publish to NPM
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+          
+      - name: Install dependencies
+        run: bun install
+        
+      - name: Build packages
+        run: bun run build
+        
+      - name: Setup NPM
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          
+      - name: Publish flush-core
+        run: |
+          cd packages/core
+          npm publish --access public
+          
+      - name: Publish flush-cli  
+        run: |
+          cd packages/cli
+          npm publish --access public
+          
+      - name: Publish create-flush
+        run: |
+          cd packages/create-flush
+          npm publish --access public

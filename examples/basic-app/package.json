@@ -1,0 +1,19 @@
+{
+  "name": "flush-basic-example",
+  "version": "1.0.0",
+  "description": "Basic Flush framework example",
+  "type": "module",
+  "scripts": {
+    "dev": "flush serve",
+    "build": "bun build src/index.ts --outdir dist --target bun",
+    "start": "bun run dist/index.js"
+  },
+  "dependencies": {
+    "flush-core": "workspace:*",
+    "flush-cli": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}

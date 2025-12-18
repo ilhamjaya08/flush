@@ -1,0 +1,39 @@
+{
+  "name": "flush-framework",
+  "version": "0.1.0",
+  "description": "A fast, clean MVC framework for Bun runtime",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "dev": "bun run --watch packages/core/src/index.ts",
+    "build": "bun run build:core && bun run build:cli && bun run build:create-flush",
+    "build:core": "cd packages/core && bun run build",
+    "build:cli": "cd packages/cli && bun run build", 
+    "build:create-flush": "cd packages/create-flush && bun run build",
+    "test": "bun test",
+    "lint": "eslint packages/*/src/**/*.ts",
+    "version:patch": "bun run scripts/version-bump.js patch",
+    "version:minor": "bun run scripts/version-bump.js minor", 
+    "version:major": "bun run scripts/version-bump.js major",
+    "publish:all": "bun run scripts/publish.js",
+    "release:patch": "bun run version:patch && bun run publish:all",
+    "release:minor": "bun run version:minor && bun run publish:all",
+    "release:major": "bun run version:major && bun run publish:all"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "keywords": ["framework", "mvc", "bun", "typescript", "web"],
+  "author": "Flush Framework Team",
+  "license": "MIT"
+}
