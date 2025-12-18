@@ -3,6 +3,8 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Flush Framework',
   description: 'A fast, clean MVC framework for Bun runtime',
+  base: '/',
+  cleanUrls: true,
   
   head: [
     ['link', { rel: 'icon', href: '/flush-icon.png' }],
