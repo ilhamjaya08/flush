@@ -1,0 +1,15 @@
+{
+  "name": "flush-docs",
+  "version": "1.0.0",
+  "description": "Flush Framework Documentation",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "serve": "vitepress serve"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}

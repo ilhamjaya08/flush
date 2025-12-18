@@ -40,11 +40,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flush-framework/flush.git",
+    "url": "git+https://github.com/ilhamjaya08/flush-framework.git",
     "directory": "packages/cli"
   },
   "homepage": "https://flush-framework.dev",
   "bugs": {
-    "url": "https://github.com/flush-framework/flush/issues"
+    "url": "https://github.com/ilhamjaya08/flush-framework/issues"
   }
 }
