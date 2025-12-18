@@ -111,7 +111,7 @@ function createProjectStructure(projectName: string, template: string) {
 function createAppFiles(projectPath: string) {
   // Main app file
   const appTemplate = `import { FlushApp, Middleware } from 'flush-core';
-import { routes } from './routes';
+import { routes } from '@/routes';
 
 const app = new FlushApp({
   port: 3000,
@@ -134,7 +134,7 @@ app.listen().catch(console.error);
   
   // Routes file
   const routesTemplate = `import type { FlushApp } from 'flush-core';
-import { HomeController } from './controllers/HomeController';
+import { HomeController } from '@/controllers/HomeController';
 
 export function routes(app: FlushApp) {
   // Home routes

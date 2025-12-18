@@ -1,6 +1,6 @@
 {
   "name": "flush-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Flush framework core - A fast, clean MVC framework for Bun",
   "type": "module",
   "main": "./dist/index.js",

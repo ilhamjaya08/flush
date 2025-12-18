@@ -1,5 +1,5 @@
 import { FlushApp, Middleware } from 'flush-core';
-import { UserController } from './controllers/UserController';
+import { UserController } from '@/controllers/UserController';
 
 const app = new FlushApp({
   port: 3000,
